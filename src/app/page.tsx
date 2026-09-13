@@ -3,7 +3,7 @@
 import dynamic from "next/dynamic";
 import { Suspense, useState, useEffect } from "react";
 
-const GameScene = dynamic(() => import("@/components/GameScene"), {
+const GameScene = dynamic(() => import("@/components/GameSceneEnhanced"), {
   ssr: false,
 });
 

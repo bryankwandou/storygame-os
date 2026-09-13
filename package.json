@@ -1,6 +1,6 @@
 {
   "name": "storygame-os",
-  "version": "0.1.0",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -16,9 +16,12 @@
     "@react-three/fiber": "^8.17.10",
     "@react-three/drei": "^9.117.3",
     "@react-three/postprocessing": "^2.16.3",
+    "@react-three/rapier": "^1.4.0",
     "zustand": "^5.0.2",
     "framer-motion": "^11.11.17",
-    "howler": "^2.2.4"
+    "howler": "^2.2.4",
+    "postprocessing": "^6.36.4",
+    "three-stdlib": "^2.35.5"
   },
   "devDependencies": {
     "typescript": "^5",
