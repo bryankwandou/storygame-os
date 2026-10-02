@@ -82,7 +82,7 @@ export function createProceduralNormalMap(
 }
 
 // Generate roughness map
-export function createRoughnessMap(type: "skin" | "fabric" | "leather" = "skin"): THREE.CanvasTexture {
+export function createRoughnessMap(type: "skin" | "fabric" | "leather" | "metal" | "wood" = "skin"): THREE.CanvasTexture {
   const size = 512;
   const canvas = document.createElement("canvas");
   canvas.width = size;
@@ -124,8 +124,8 @@ export function createAdvancedMaterial(
   type: "skin" | "fabric" | "denim" | "leather" | "metal" | "wood",
   color: string
 ): THREE.MeshPhysicalMaterial {
-  const normalMap = createProceduralNormalMap(type === "denim" ? "fabric" : type);
-  const roughnessMap = createRoughnessMap(type === "denim" ? "fabric" : type);
+  const normalMap = createProceduralNormalMap(type === "denim" ? "fabric" : type === "wood" ? "skin" : type);
+  const roughnessMap = createRoughnessMap(type === "denim" ? "fabric" : type === "wood" ? "skin" : type);
 
   switch (type) {
     case "skin":
